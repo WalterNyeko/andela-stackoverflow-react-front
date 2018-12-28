@@ -4,7 +4,7 @@ export default class NavBar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-md">
+        <nav className="navbar navbar-expand-md fixed-top">
           <a className="navbar-brand" href="#">
             StackOverFlow Lite
           </a>

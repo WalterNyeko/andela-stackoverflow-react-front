@@ -1,4 +1,8 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+body {
+  overflow-x: hidden;
+}
+
 .navbar {
   background-color: #eeeeee !important;
   border-top: 4px solid #0d47a1;
@@ -6,6 +10,113 @@
 }
 
 #searchForm {
-  width: 800px;
+  width: 60vw;
   height: 38px;
+}
+
+.form-control:focus {
+  border: 0px solid !important;
+  color: red;
+}
+
+.card-body {
+  padding: 10px 20px 0px 10px !important;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  z-index: 999;
+  transition: 0.5s;
+}
+
+.content {
+  margin-top: 60px;
+}
+
+.spacing {
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 13px;
+}
+
+.body-header {
+  width: 56%;
+  position: fixed;
+  z-index: 999;
+  background: #fff;
+}
+
+.questions {
+  margin-top: 78px;
+}
+
+.right-border {
+  border-right: 1px solid #d6d9dc;
+  height: 100vh;
+}
+
+.left-border {
+  border-left: 1px solid #d6d9dc;
+  height: 100vh;
+}
+
+.right-sidebar {
+  background-color: #fff8dc;
+  border: 1px solid rgba(59, 64, 69, 0.1);
+  box-shadow: 0 2px 8px rgba(59, 64, 69, 0.1);
+  border-radius: 5px;
+}
+
+.fixed-left-sidebar {
+  position: fixed;
+  height: 100vh;
+}
+
+.fixed-right-sidebar {
+  position: fixed;
+  height: 100vh;
+  right: 0px;
+}
+
+.main-content {
+  position: relative;
+  left: 240px;
+}
+
+/*Footer*/
+
+footer {
+  width: 100vw;
+  height: 50px;
+  background: #000;
+  position: relative;
+  bottom: -50px;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/*Media Query*/
+
+@media (max-width: 912px) {
+  #searchForm {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #searchForm {
+    width: 93vw;
+  }
+
+  .nav-item {
+    display: inline-block;
+  }
+  .navbar-nav {
+    display: inline-block;
+    float: right;
+  }
 }

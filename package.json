@@ -4,10 +4,24 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "coveralls": "^3.0.2",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "jquery": "^3.3.1",
+    "keymirror": "^0.1.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-modal": "^3.8.1",
+    "react-notify-toast": "^0.5.0",
+    "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.2"
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "2.1.2",
+    "react-test-renderer": "^16.7.0",
+    "react-toastify": "^4.5.2",
+    "react-toasts": "^2.0.14",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,12 +30,17 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "lint": "./node_modules/.bin/eslint ."
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "redux-mock-store": "^1.5.3"
+  }
 }

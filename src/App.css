@@ -1,32 +1,157 @@
-.App {
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #eeeeee !important;
+  border-top: 4px solid #0d47a1;
+  box-shadow: 0 1px 0 rgba(12, 13, 14, 0.1), 0 1px 6px rgba(59, 64, 69, 0.1);
+}
+
+#searchForm {
+  width: 60vw;
+  height: 38px;
+}
+
+.form-control:focus {
+  border: 0px solid !important;
+  color: red;
+}
+
+.card-body {
+  padding: 10px 20px 0px 10px !important;
+}
+
+.question-body:hover {
+  transform: scale(1.1);
+  z-index: 999;
+  transition: 0.5s;
+}
+.ask-question {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.content {
+  margin-top: 60px;
+}
+
+.spacing {
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 13px;
+}
+
+.body-header {
+  width: 56%;
+  position: fixed;
+  z-index: 999;
+  background: #fff;
+}
+
+.body-header-details {
+  width: 56%;
+  position: fixed;
+  z-index: 999;
+  background: #fff;
+  left: 255px;
+}
+
+.body-header-question {
+  width: 56%;
+  position: fixed;
+  z-index: 999;
+  background: #fff;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.question-form {
+  position: relative;
+  left: 240px;
+}
+.questions {
+  margin-top: 78px;
+}
+
+.right-border {
+  border-right: 1px solid #d6d9dc;
+  height: 100vh;
+}
+
+.left-border {
+  border-left: 1px solid #d6d9dc;
+  height: 100vh;
+}
+
+.right-sidebar {
+  background-color: #fff8dc;
+  border: 1px solid rgba(59, 64, 69, 0.1);
+  box-shadow: 0 2px 8px rgba(59, 64, 69, 0.1);
+  border-radius: 5px;
+}
+
+.fixed-left-sidebar {
+  position: fixed;
+  height: 100vh;
+  left: 0px;
+}
+
+.fixed-right-sidebar {
+  position: fixed;
+  height: 100vh;
+  right: 0px;
+}
+
+.main-content {
+  position: relative;
+  left: 240px;
+}
+
+.main-content-details {
+  left: 0px;
+  padding-left: 0px;
+}
+
+.main-content-login {
+  left: 160px;
+  padding-left: 0px;
+}
+/*Footer*/
+
+footer {
+  width: 100vw;
+  height: 50px;
+  background: #000;
+  position: relative;
+  bottom: -50px;
+  margin-top: 665px;
+}
+
+footer p {
+  color: #fff;
   text-align: center;
+  padding-top: 10px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
+/*Media Query*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 912px) {
+  #searchForm {
+    width: 40vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  #searchForm {
+    width: 93vw;
+  }
+
+  .nav-item {
+    display: inline-block;
+  }
+  .navbar-nav {
+    display: inline-block;
+    float: right;
   }
 }

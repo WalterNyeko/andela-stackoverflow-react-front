@@ -1,3 +1,8 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/4d1a485c643a4f17fed4/maintainability)](https://codeclimate.com/github/JSnakegitHub/Andela-Bootcamp-React/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/4d1a485c643a4f17fed4/test_coverage)](https://codeclimate.com/github/JSnakegitHub/Andela-Bootcamp-React/test_coverage)
+
+[![Build Status](https://travis-ci.org/JSnakegitHub/Andela-Bootcamp-React.svg?branch=develop)](https://travis-ci.org/JSnakegitHub/Andela-Bootcamp-React)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -8,6 +13,7 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [Heroku](https://stack-overflow-lite-react.herokuapp.com/) to view it on heroku.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.

@@ -1,17 +1,19 @@
 import React from "react";
 import RightSideBar from "../utils/RightSideBar";
 import LeftSideBar from "../utils/LeftSideBar";
-import MiddleSection from "./MiddleSection";
 import Footer from "../utils/Footer";
+import DefaultLayout from "../utils/DefaultLayout";
+import QuestionDetails from "../questions/QuestionDetails";
 
-export const QuestionsComponent = () => {
+export const YourQuestionDetails = () => {
   return (
     <div>
       <div className="content">
         <div className="container-fluid">
+          <DefaultLayout />
           <div className="row">
             <LeftSideBar />
-            <MiddleSection />
+            <QuestionDetails />
             <RightSideBar />
           </div>
         </div>

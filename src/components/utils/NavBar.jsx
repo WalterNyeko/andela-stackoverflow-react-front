@@ -1,13 +1,14 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
-export default class NavBar extends Component {
+class NavBar extends Component {
   render() {
     return (
       <div>
         <nav className="navbar navbar-expand-md fixed-top">
-          <a className="navbar-brand" href="#">
+          <NavLink className="navbar-brand" to={`/articles/id`}>
             StackOverFlow Lite
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -30,15 +31,23 @@ export default class NavBar extends Component {
               />
             </form>
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item mr-2">
-                <a className="btn btn-light btn-sm" href="#">
-                  Login
-                </a>
-              </li>
+              {!localStorage.getItem("token") ? null : (
+                <li className="nav-item mr-2">
+                  <NavLink className="navbar-brand" to={`/users/login`}>
+                    <a href="/" className="btn btn-light btn-sm">
+                      {" "}
+                      Login
+                    </a>
+                  </NavLink>
+                </li>
+              )}
               <li className="nav-item">
-                <a className="btn btn-primary btn-sm" href="#">
-                  Sign Up
-                </a>
+                <NavLink className="navbar-brand" to={`/users/signup`}>
+                  <a href="/" className="btn btn-primary btn-sm">
+                    {" "}
+                    Sign Up
+                  </a>
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -47,3 +56,5 @@ export default class NavBar extends Component {
     );
   }
 }
+
+export default NavBar;

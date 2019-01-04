@@ -1,12 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import NavBar from "./NavBar";
 
-export default class DefaultLayout extends Component {
-  render() {
-    return (
-      <div>
-        <NavBar />
-      </div>
-    );
-  }
+export default function DefaultLayout(showLoginForm, showSignUpForm) {
+  return (
+    <div>
+      <NavBar showLoginForm={showLoginForm} showSignUpForm={showSignUpForm} />
+    </div>
+  );
 }

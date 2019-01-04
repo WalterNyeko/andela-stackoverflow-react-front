@@ -23,12 +23,15 @@ body {
   padding: 10px 20px 0px 10px !important;
 }
 
-.card:hover {
+.question-body:hover {
   transform: scale(1.1);
   z-index: 999;
   transition: 0.5s;
 }
-
+.ask-question {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 .content {
   margin-top: 60px;
 }
@@ -46,6 +49,27 @@ body {
   background: #fff;
 }
 
+.body-header-details {
+  width: 56%;
+  position: fixed;
+  z-index: 999;
+  background: #fff;
+  left: 255px;
+}
+
+.body-header-question {
+  width: 56%;
+  position: fixed;
+  z-index: 999;
+  background: #fff;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.question-form {
+  position: relative;
+  left: 240px;
+}
 .questions {
   margin-top: 78px;
 }
@@ -70,6 +94,7 @@ body {
 .fixed-left-sidebar {
   position: fixed;
   height: 100vh;
+  left: 0px;
 }
 
 .fixed-right-sidebar {
@@ -83,6 +108,15 @@ body {
   left: 240px;
 }
 
+.main-content-details {
+  left: 0px;
+  padding-left: 0px;
+}
+
+.main-content-login {
+  left: 160px;
+  padding-left: 0px;
+}
 /*Footer*/
 
 footer {
@@ -91,6 +125,7 @@ footer {
   background: #000;
   position: relative;
   bottom: -50px;
+  margin-top: 665px;
 }
 
 footer p {

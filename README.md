@@ -1,3 +1,6 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/4d1a485c643a4f17fed4/maintainability)](https://codeclimate.com/github/JSnakegitHub/Andela-Bootcamp-React/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/4d1a485c643a4f17fed4/test_coverage)](https://codeclimate.com/github/JSnakegitHub/Andela-Bootcamp-React/test_coverage)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

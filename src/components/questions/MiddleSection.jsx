@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import configureStore from "../../store/store";
 import SingleQuestionComponent from "./SingleQuestionComponent";
 
 export default class MiddleSection extends Component {

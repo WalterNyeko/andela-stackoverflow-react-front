@@ -6,7 +6,7 @@ class NavBar extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand-md fixed-top">
-          <NavLink className="navbar-brand" to={`/articles/id`}>
+          <NavLink className="navbar-brand" to={`/`}>
             StackOverFlow Lite
           </NavLink>
           <button

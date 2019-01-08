@@ -19,10 +19,10 @@ export const fetchQuestion = id => dispatch => {
     method: "GET"
   })
     .then(resp => resp.json())
-    .then(questions => {
+    .then(question => {
       dispatch({
         type: FETCH_QUESTION,
-        payload: questions
+        payload: question
       });
     });
 };
@@ -37,7 +37,6 @@ export const postQuestion = body => dispatch => {
   })
     .then(resp => resp.json())
     .then(data => {
-      console.log(data);
       if (data.Message === "Question Posted Successfully") {
         toast.success(data.Message, {
           position: toast.POSITION.TOP_CENTER

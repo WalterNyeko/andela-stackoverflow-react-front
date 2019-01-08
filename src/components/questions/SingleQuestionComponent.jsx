@@ -9,12 +9,13 @@ export class SingleQuestionComponent extends Component {
   componentWillMount() {
     this.props.fetchQuestions();
   }
+ 
 
   render() {
-    function truncate(str, no_words) {
+    function truncate(str, numberOfWords) {
       return str
         .split(" ")
-        .splice(0, no_words)
+        .splice(0, numberOfWords)
         .join(" ");
     }
     const fetchedQuestions = this.props.questions.map(question => (
@@ -37,8 +38,7 @@ export class SingleQuestionComponent extends Component {
                     {truncate(question.question_body, 5)}...{" "}
                     <NavLink
                       className="navbar-brand"
-                      to={`/articles?token=${question.question_id}`}
-                      onClick={this.handleSingleQuestion}
+                      to={`/questions/${question.question_id}`}
                     >
                       read more
                     </NavLink>
@@ -56,6 +56,7 @@ export class SingleQuestionComponent extends Component {
     return <div>{fetchedQuestions}</div>;
   }
 }
+
 export const mapStateToProps = state => ({
   questions: state.questions.questions
 });

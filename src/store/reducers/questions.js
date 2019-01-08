@@ -1,4 +1,4 @@
-import { FETCH_QUESTIONS, POST_QUESTION } from "../types";
+import { FETCH_QUESTIONS, POST_QUESTION, FETCH_QUESTION } from "../types";
 
 const initialState = {
   questions: [],
@@ -11,6 +11,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         questions: action.payload
+      };
+    case FETCH_QUESTION:
+      return {
+        ...state,
+        question: action.payload
       };
     case POST_QUESTION:
       return {

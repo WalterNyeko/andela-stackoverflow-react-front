@@ -52,6 +52,7 @@ export class LoginFormComponent extends Component {
                 onChange={this.onChange}
               />
             </div>
+
             <div className="form-group">
               <button className="btn btn-success" onClick={this.handleSubmit}>
                 Login

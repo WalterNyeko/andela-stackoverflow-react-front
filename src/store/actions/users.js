@@ -1,9 +1,6 @@
 import { toast } from "react-toastify";
-// import { createHashHistory } from "history";
 import { push } from "react-router-redux";
 import { SIGN_UP_USER, LOGIN_USER } from "../types";
-
-// const history = createHashHistory();
 
 export const signUpUser = userData => dispatch => {
   fetch("https://stackoverflow-lite-two.herokuapp.com/api/v1/auth/signup", {
@@ -48,7 +45,6 @@ export const loginUser = body => dispatch => {
         toast.success(data.Message, {
           position: toast.POSITION.TOP_CENTER
         });
-        dispatch(push("/foo"));
       } else {
         toast.error(data.Message, {
           position: toast.POSITION.TOP_CENTER
@@ -58,6 +54,5 @@ export const loginUser = body => dispatch => {
         type: LOGIN_USER,
         payload: data
       });
-      dispatch(push("/foo"));
     });
 };

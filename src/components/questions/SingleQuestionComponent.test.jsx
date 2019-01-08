@@ -42,6 +42,7 @@ describe("", () => {
 
   test("should return the initial state", () => {
     expect(questionsReducer(undefined, {})).toEqual({
+      answer: {},
       question: {},
       questions: []
     });

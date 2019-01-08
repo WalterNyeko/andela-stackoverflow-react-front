@@ -3,13 +3,9 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { fetchQuestions, fetchQuestion } from "../../store/actions/questions";
 export class SingleQuestionComponent extends Component {
-  constructor(props) {
-    super(props);
-  }
   componentWillMount() {
     this.props.fetchQuestions();
   }
- 
 
   render() {
     function truncate(str, numberOfWords) {

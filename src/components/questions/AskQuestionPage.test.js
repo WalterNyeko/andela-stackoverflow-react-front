@@ -1,6 +1,5 @@
 import React from "react";
 import { shallow } from "enzyme";
-import configureStore from "redux-mock-store";
 import AskQuestionPage from "./AskQuestionPage";
 window.React = React;
 describe("AskQuestionPage", () => {

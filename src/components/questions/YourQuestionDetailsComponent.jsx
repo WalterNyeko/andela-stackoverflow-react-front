@@ -1,11 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
 import RightSideBar from "../utils/RightSideBar";
 import LeftSideBar from "../utils/LeftSideBar";
 import Footer from "../utils/Footer";
 import DefaultLayout from "../utils/DefaultLayout";
 
-export const YourQuestionDetailsComponent = ({ answers, question }) => {
+export const YourQuestionDetailsComponent = ({
+  answers,
+  question,
+  handleSubmit,
+  answer_body,
+  onChange
+}) => {
   return (
     <div>
       <div>
@@ -75,10 +80,16 @@ export const YourQuestionDetailsComponent = ({ answers, question }) => {
                             cols="30"
                             rows="2"
                             className="form-control"
+                            name="answer_body"
+                            onChange={onChange}
+                            defaultValue={answer_body}
                           />
                         </div>
                         <div className="form-group">
-                          <button className="btn btn-success">
+                          <button
+                            className="btn btn-success"
+                            onClick={handleSubmit}
+                          >
                             Post Answer
                           </button>
                         </div>

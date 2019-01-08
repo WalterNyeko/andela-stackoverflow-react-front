@@ -1,5 +1,10 @@
 import { toast } from "react-toastify";
-import { FETCH_QUESTION, FETCH_QUESTIONS, POST_QUESTION } from "../types";
+import {
+  FETCH_QUESTION,
+  FETCH_QUESTIONS,
+  POST_QUESTION,
+  POST_ANSWER
+} from "../types";
 
 export const fetchQuestions = () => dispatch => {
   fetch("https://stackoverflow-lite-two.herokuapp.com/api/v1/questions", {
@@ -45,11 +50,55 @@ export const postQuestion = body => dispatch => {
         toast.error(data.Message, {
           position: toast.POSITION.TOP_CENTER
         });
+        toast.error(data.msg, {
+          position: toast.POSITION.TOP_CENTER
+        });
       }
       dispatch({
         type: POST_QUESTION,
         payload: data
       });
       dispatch(fetchQuestions());
+    });
+};
+
+export const postAnswer = data => dispatch => {
+  const { answer_body, id } = data;
+
+  console.log("nndnfnfnfnf...", answer_body);
+  const body = {
+    answer_body
+  };
+  console.log(body);
+  fetch(
+    `https://stackoverflow-lite-two.herokuapp.com/api/v1/questions/${id}/answers`,
+    {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("token")
+      },
+      body: JSON.stringify(body)
+    }
+  )
+    .then(resp => resp.json())
+    .then(data => {
+      if (data.Message === "Answer posted successfully") {
+        toast.success(data.Message, {
+          position: toast.POSITION.TOP_CENTER
+        });
+      } else {
+        toast.error(data.Message, {
+          position: toast.POSITION.TOP_CENTER
+        });
+        toast.error(data.msg, {
+          position: toast.POSITION.TOP_CENTER
+        });
+      }
+      dispatch({
+        type: POST_ANSWER,
+        payload: data
+      });
+      dispatch(fetchQuestion(id));
     });
 };
